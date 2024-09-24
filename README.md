@@ -20,4 +20,15 @@ The main script for running the analysis is `pipeline.sh`. To use the code, plea
 2. **Run the Pipeline**:
    Execute the script using the command:
    ```bash
-   sh pipeline.sh -i input -o output
+   sh pipeline.sh -i input.fastq.gz -o output_location
+
+
+## Targets file demand
+# Gene Primer Design Table
+
+| Gene        | Direction | Exon | FP                 | Start | End   | Primer             |
+|-------------|-----------|------|--------------------|-------|-------|--------------------|
+| TargetGene1 | +         | 1    | ATCGTAGC + xxxxx   | 1000  | 1100  | ATCGTAGC            |
+| TargetGene2 | -         | 2    | GCTAGCTA + xxxxx   | 2000  | 2100  | GCTAGCTA            |
+| TargetGene3 | +         | 3    | TTAGGCCA + xxxxx   | 3000  | 3100  | TTAGGCCA            |
+
