@@ -28,7 +28,17 @@ The main script for running the analysis is `pipeline.sh`. To use the code, plea
 
 | Gene        | Direction | Exon | FP                 | Start | End   | Primer             |
 |-------------|-----------|------|--------------------|-------|-------|--------------------|
-| TargetGene1 | +         | 1    | ATCGTAGC + xxxxx   | 1000  | 1100  | ATCGTAGC            |
-| TargetGene2 | -         | 2    | GCTAGCTA + xxxxx   | 2000  | 2100  | GCTAGCTA            |
-| TargetGene3 | +         | 3    | TTAGGCCA + xxxxx   | 3000  | 3100  | TTAGGCCA            |
+| TargetGene1 | +         | 1    | ATCGTAGCxxxxx   | 1000  | 1100  | ATCGTAGC            |
+| TargetGene2 | -         | 2    | GCTAGCTAxxxxx   | 2000  | 2100  | GCTAGCTA            |
+| TargetGene3 | +         | 3    | TTAGGCCAxxxxx   | 3000  | 3100  | TTAGGCCA            |
+
+This file is in CSV format and includes the following content:
+
+- **Gene**: Name of the target gene
+- **Direction**: the direction for primer  designed based on the `+` or `-` strand of the chromosome
+- **FP**: Contains the designed primer sequence and spacer sequence
+- **Start**: Corresponds to the starting position on the chromosome
+- **End**: Corresponds to the ending position on the chromosome
+- **Primer**: The sequence of the designed primer sequence
+
 
