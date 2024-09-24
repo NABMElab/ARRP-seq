@@ -24,7 +24,7 @@ The main script for running the analysis is `pipeline.sh`. To use the code, plea
 
 
 ## Targets file demand
-# Gene Primer Design Table
+### Gene Primer Design Table
 
 | Gene        | Direction | Exon | FP                 | Start | End   | Primer             |
 |-------------|-----------|------|--------------------|-------|-------|--------------------|
@@ -40,5 +40,9 @@ This file is in CSV format and includes the following content:
 - **Start**: Corresponds to the starting position on the chromosome
 - **End**: Corresponds to the ending position on the chromosome
 - **Primer**: The sequence of the designed primer sequence
+
+## Example
+test fastq file is uploaded on figshare that can be downloaded from https://doi.org/10.6084/m9.figshare.27093502.v1
+run the `run.sh`, the reference version for all referecnce such as fastq, gtf and database for blast used in example is hg38. Target file is included in `Example` file.
 
 
