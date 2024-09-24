@@ -12,7 +12,7 @@ The main script for running the analysis is `pipeline.sh`. To use the code, plea
    - `database`: The desired location for your database built for local blast.
    - `Ref`: The desired location for you reference file, e.g. Homo_sapiens.GRCh38.cdna.all.fa.
 
-  Open `runArriba.sh` and update the variables for refernce including `--genomeDir` for STAR and `-a`,-g` for Arriba. some of these files are included in files installed.
+  Open `runArriba.sh` and update the variables for refernce including `--genomeDir` for STAR and `-a`,`-g` for Arriba. some of these files are included in files installed.
   
   Open `Partners.sh` and update the following variables:
   - `Gtf`: The location of your gtf file, `.gz` is demanded.
