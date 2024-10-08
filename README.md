@@ -17,6 +17,8 @@ The main script for running the analysis is `pipeline.sh`. To use the code, plea
   Open `Partners.sh` and update the following variables:
   - `Gtf`: The location of your gtf file, `.gz` is demanded.
 
+open `RawFilter.py` and update the target gene designed. Please replace the NTRK1|NTRK2|NTRK3|FGFR2|FGFR3 with any other target genes covered by your p   anel in the code `o1 = out[(out["#gene1"].str.contains('NTRK1|NTRK2|NTRK3|FGFR2|FGFR3').astype("int")+out["gene2"].str.contains('NTRK1|NTRK2|NTRK3|FGFR2|FGFR3').astype("int"))== 1]`  
+
 2. **Run the Pipeline**:
    Execute the script using the command:
    ```bash
