@@ -2,6 +2,8 @@
 
 This repository contains code for processing fusion genes with ARRP-seq. The code is designed to streamline the analysis of fusion gene data, facilitating research and development in this area.
 
+The pipeline has some dependencies including fastp, STAR, Arriba and blast. The python version used in example is 3.10.13.
+
 ## Usage
 
 The main script for running the analysis is `pipeline.sh`. To use the code, please follow these steps:
@@ -13,7 +15,7 @@ The main script for running the analysis is `pipeline.sh`. To use the code, plea
    - `Ref`: The desired location for you reference file, e.g. Homo_sapiens.GRCh38.cdna.all.fa.
    - `pseudo`: The location for pseudo genes or other excluded genes.
 
-  Open `runArriba.sh` and update the variables for refernce including `--genomeDir` for STAR and `-a`,`-g` for Arriba. some of these files are included in files installed.
+  Open `runArriba.sh` and update the variables for refernce including `--genomeDir` for STAR and `-a`,`-g` and other reference variables for Arriba. Some of these files are included in files installed.
   
   Open `Partners.sh` and update the following variables:
   - `Gtf`: The location of your gtf file, `.gz` is demanded.
@@ -46,6 +48,7 @@ This file is in CSV format and includes the following content:
 
 ## Example
 test fastq file is uploaded on figshare that can be downloaded from https://doi.org/10.6084/m9.figshare.27093502.v1
+Before running the code, please put all the codes and run.sh in the same folder named code.
 run the `run.sh`, the reference version for all referecnce such as fastq, gtf and database for blast used in example is hg38. Target file is included in `Example` file.
 
 
