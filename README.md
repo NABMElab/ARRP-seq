@@ -11,6 +11,7 @@ The main script for running the analysis is `pipeline.sh`. To use the code, plea
    - `TargetsFile`: The location of your primer design whose detailed demand could be found on section tagets file.
    - `database`: The desired location for your database built for local blast.
    - `Ref`: The desired location for you reference file, e.g. Homo_sapiens.GRCh38.cdna.all.fa.
+   - `pseudo`: The location for pseudo genes or other excluded genes.
 
   Open `runArriba.sh` and update the variables for refernce including `--genomeDir` for STAR and `-a`,`-g` for Arriba. some of these files are included in files installed.
   
