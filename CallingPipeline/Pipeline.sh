@@ -22,6 +22,8 @@ done
 
 inputname=`basename $input .fastq.gz`
 TargetsFile="/Path/To/targets.csv" # primer design files for reference
+pseudo="/Path/To/pseudo.csv" # black list for genes such as pseudogene
+
 cd ${output}
 
 
@@ -109,7 +111,7 @@ for reads in `cat ${output}/tmp/${inputname}.txt`; do
                           print $0;
                         }
                       }
-                    ' /Path/to/reference/gtf/pseudo.csv ${blastModified} > ${output}/tmp/${inputname}_modified1.csv
+                    ' ${pseudo} ${blastModified} > ${output}/tmp/${inputname}_modified1.csv
                     Partners ${name} ${output}/tmp/${inputname}_modified1.csv ${inputname}
                     partner1=`echo ${name} | cut -d '@' -f 2 | cut -d '|' -f 1 | cut -d '(' -f 1`
                     partner2=`echo ${name} | cut -d '@' -f 2 | cut -d '|' -f 2 | cut -d '(' -f 1`
@@ -167,7 +169,7 @@ if [ -s "${output}/result/${inputname}_fusion_Raw.csv" ]; then
 fi
 if [ -s "${output}/tmp/${inputname}_exon.csv" ]; then
     sed -i "1iTranscript,Gene,Chromosome,Start,End,Dir,Exon" ${output}/tmp/${inputname}_exon.csv
-    python ${Code}/code/Concat.py ${output} ${inputname} "/Path/to/code/targets.csv"
+    python ${Code}/code/Concat.py ${output} ${inputname} ${TargetsFile}
 fi
 
 if [ -s "${output}/tmp/${inputname}_ExonFiltered.csv" ]; then
